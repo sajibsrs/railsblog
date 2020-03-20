@@ -1,6 +1,22 @@
-<% if user_signed_in? %>
-  <h1>User Details</h1>
-  <p><%= @user.fname + ' ' + @user.lname %></p>
-  <p><%= @user.email %></p>
-  <p><%= link_to "All users", users_path %></p>
-<% end %>
+<div class="row">
+  <div class="col-sm">
+    <div class="media">
+      <svg class="mr-3 rounded-circle" width="100px" height="100px"
+           xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+           focusable="false" role="img" aria-label="Placeholder: Image cap">
+        <rect width="100%" height="100%" fill="#868e96"></rect>
+      </svg>
+      <div class="media-body">
+        <h5 class="mt-0"><%= @user.fname + " " + @user.lname %></h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>First name:</strong> <%= @user.fname %></li>
+          <li class="list-group-item"><strong>Last name:</strong> <%= @user.lname %></li>
+          <li class="list-group-item"><strong>Email:</strong> <%= @user.email %></li>
+          <li class="list-group-item"><strong>Account created:</strong> <%= @user.created_at %></li>
+        </ul>
+        <br>
+        <%= link_to "All users", users_path, :class => "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
