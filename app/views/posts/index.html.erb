@@ -1,6 +1,6 @@
-<div class="jumbotron">
-  <h1 class="display-4">List of all posts</h1>
-</div>
+<h1 class="h2 align-middle d-inline-block">All posts</h1>
+<%= link_to "Add new post", new_post_path, method: :get, :class => "btn btn-primary float-right" %>
+<hr class="mb-4">
 
 <div class="row">
   <% @posts.each do |post| %>
@@ -19,10 +19,4 @@
       </div>
     </div>
   <% end %>
-</div>
-
-<div class="row">
-  <div class="col">
-    <%= link_to "Add new post", new_post_path, method: :get, :class => "btn btn-primary" %>
-  </div>
 </div>

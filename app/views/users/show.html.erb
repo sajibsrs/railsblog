@@ -1,6 +1,5 @@
-<div class="jumbotron">
-  <h1 class="display-4">User details</h1>
-</div>
+<h1 class="h2">User details</h1>
+<hr class="mb-4">
 
 <div class="row">
   <div class="col-sm">
@@ -11,8 +10,8 @@
         <rect width="100%" height="100%" fill="#868e96"></rect>
       </svg>
       <div class="media-body">
-        <h5 class="mt-0"><%= @user.fname + " " + @user.lname %></h5>
-        <ul class="list-group list-group-flush">
+        <h5 class="mb-4"><%= @user.fname + " " + @user.lname %></h5>
+        <ul class="list-group">
           <li class="list-group-item"><strong>First name:</strong> <%= @user.fname %></li>
           <li class="list-group-item"><strong>Last name:</strong> <%= @user.lname %></li>
           <li class="list-group-item"><strong>Email:</strong> <%= @user.email %></li>
