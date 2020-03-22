@@ -3,4 +3,5 @@
   Description: <%= @post.content %>
 </p>
 <p>By <%= @post.user.fname + ' ' + @post.user.lname %></p>
+<%= link_to 'Edit post', edit_post_path %> |
 <%= link_to "Back", :back %>
