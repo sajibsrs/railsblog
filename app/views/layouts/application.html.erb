@@ -35,11 +35,6 @@
                 <strong class="nav-link mr-5">Howdy! <%= current_user.fname + ' ' + current_user.lname %></strong>
               </li>
               <li class="nav-item">
-                <%= link_to edit_user_registration_path, :class => 'nav-link', :title => 'Edit profile' do %>
-                  <i class="fas fa-user-edit"></i>
-                <% end %>
-              </li>
-              <li class="nav-item">
                 <%= link_to destroy_user_session_path, method: :delete, :class => 'nav-link',
                             :title => 'Log out', data: { confirm: "Log out from your account?" } do %>
                   <i class="fas fa-sign-out-alt"></i>
