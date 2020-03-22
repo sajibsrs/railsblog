@@ -32,7 +32,7 @@
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="nav-item">
-                <strong class="nav-link mr-5">Howdy! <%= current_user.fname + ' ' + current_user.lname %></strong>
+                <strong class="nav-link mr-5">Howdy! <%= @user_full_name %></strong>
               </li>
               <li class="nav-item">
                 <%= link_to edit_user_registration_path, :class => 'nav-link', :title => 'Edit profile' do %>
