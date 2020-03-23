@@ -7,6 +7,14 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = Post.new post_params
     @post.user = current_user
@@ -16,14 +24,6 @@ class PostsController < ApplicationController
     else
       redirect_to new_post_path, alert: @post.errors.full_messages
     end
-  end
-
-  def show
-    @post = Post.find(params[:id])
-  end
-
-  def edit
-    @post = Post.find(params[:id])
   end
 
   def update
