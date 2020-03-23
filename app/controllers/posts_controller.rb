@@ -8,13 +8,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new post_params
     @post.user = current_user
 
     if @post.save
-      redirect_to(@post, notice: 'Post created successfully')
+      redirect_to @post, notice: 'Post created successfully'
     else
-      redirect_to(new_post_path, alert: @post.errors.full_messages)
+      redirect_to new_post_path, alert: @post.errors.full_messages
     end
   end
 
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(post_params)
-      redirect_to(@post, notice: 'Post updated successfully')
+      redirect_to @post, notice: 'Post updated successfully'
     else
       redirect_to edit_post_path
     end
