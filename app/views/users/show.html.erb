@@ -10,7 +10,7 @@
         <rect width="100%" height="100%" fill="#868e96"></rect>
       </svg>
       <div class="media-body">
-        <h5 class="mb-4"><%= @user.fname + " " + @user.lname %></h5>
+        <h5 class="mb-4"><%= "#{@user.fname} #{@user.lname}" %></h5>
         <ul class="list-group">
           <li class="list-group-item"><strong>First name:</strong> <%= @user.fname %></li>
           <li class="list-group-item"><strong>Last name:</strong> <%= @user.lname %></li>
