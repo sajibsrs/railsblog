@@ -1,9 +1,11 @@
-<h1 class="h2 d-inline-block align-middle"><%= @post.title %></h1>
+<h1 class="h2 d-inline-block align-middle">Post page</h1>
 <%= link_to 'Delete post', @post, method: :delete, data: { confirm: 'Delete this post?' }, :class => "btn btn-danger float-right" %>
 <%= link_to 'Edit post', edit_post_path, :class => "btn btn-primary float-right mr-3" %>
 <hr class="mb-4">
 
-<p>By <%= @post.user.fname + ' ' + @post.user.lname %></p>
+<h2 class="h2 mb-3"><%= @post.title %></h2>
+<p>by <%= link_to "#{@post.user.fname} #{@post.user.lname}", user_posts_path(@post.user_id) %>
+  <small class="text-muted">on <%= @post.created_at.strftime("%d-%m-%Y") %></small></p>
 <p><%= @post.content %></p>
 
 <%= link_to "All posts", posts_path, :class => "btn btn-secondary" %>
