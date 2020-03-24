@@ -15,7 +15,7 @@
           <h5 class="mt-0"><%= post.title %></h5>
           <p>by <%= link_to "#{post.user.fname} #{post.user.lname}", user_posts_path(post.user_id) %>
             <small class="text-muted">on <%= post.created_at.strftime("%d-%m-%Y") %></small></p>
-          <p><%= post.content %></p>
+          <p><%= truncate post.content.to_plain_text, length: 250 %></p>
           <%= link_to "Show post", post %>
         </div>
       </div>
